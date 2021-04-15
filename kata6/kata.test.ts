@@ -1,11 +1,14 @@
+// See https://www.chaijs.com for how to use Chai.
 import { assert } from "chai";
-import { findEvenIndex } from "./solution";
 
-describe("FindEvenIndex", () => {
-  it("Tests", () => {
-    assert.equal(findEvenIndex([1,2,3,4,3,2,1]), 3, "The array was: [1,2,3,4,3,2,1] \n");
-    assert.equal(findEvenIndex([1,100,50,-51,1,1]),1, "The array was: [1,100,50,-51,1,1] \n");
-    assert.equal(findEvenIndex([1,2,3,4,5,6]),-1, "The array was: [1,2,3,4,5,6] \n");
-    assert.equal(findEvenIndex([20,10,30,10,10,15,35]),3, "The array was: [20,10,30,10,10,15,35] \n");
+import { flyBy } from "./kata";
+
+describe("Example Tests", function() {
+  it("Basic Tests", function() {
+    assert.strictEqual(flyBy('xxxxxx', '====T'), 'ooooox');
+    assert.strictEqual(flyBy('xxxxxxxxx', '==T'), 'oooxxxxxx');
+    assert.strictEqual(flyBy('xxxxxxxxxxxxxxx', '=========T'), 'ooooooooooxxxxx');
+//    assert.strictEqual(flyBy('xxxxxxxxxxxxxxxxxxxxx', '121212121212121212121212'), 'oooooooooooooooooooooooo');
   });
 });
+
