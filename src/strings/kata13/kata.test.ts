@@ -1,0 +1,19 @@
+import { catMouse } from './kata';
+describe('Basic Tests', function () {
+  it('It should works for basic tests', function () {
+    var map = `..C......
+.........
+....m....`;
+    expect(catMouse(map, 5)).toBe('Caught!');
+
+    map = `.C.......
+.........
+......m..`;
+    expect(catMouse(map, 5)).toBe('Escaped!');
+
+    let map3 = `..C......
+.........
+.........`;
+    expect(catMouse(map3, 5)).toBe('boring without two animals');
+  });
+});
