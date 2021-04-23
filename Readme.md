@@ -23,7 +23,7 @@
 
 - [ ] Array
 - [x] 7 kyu https://www.codewars.com/kata/playing-with-sets-intersection
-- [ ] 7 kyu https://www.codewars.com/kata/divide-and-conquer
+- [x] 7 kyu https://www.codewars.com/kata/divide-and-conquer
 - [ ] 6 kyu https://www.codewars.com/kata/find-the-odd-int/
 - [ ] 6 kyu https://www.codewars.com/kata/find-the-parity-outlier
 - [ ] 6 kyu https://www.codewars.com/kata/zipwith
