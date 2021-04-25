@@ -1,22 +1,14 @@
-import { inter } from './solution';
+import { findOdd } from './solution';
 
 describe('simple test', function () {
-  let A = new Set([1, 2]);
-  let B = new Set([2, 3]);
-  let C = new Set([2]);
-  let AB = inter(A, B);
-
   it('It should works for basic tests', function () {
-    expect(inter(A, A)).toEqual(A);
-    expect(AB).toEqual(C);
-    expect(AB).toEqual(C);
-    expect([...AB].sort()).toEqual([...inter(B, A)].sort());
+    expect(
+      findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5])
+    ).toEqual(5);
+    expect(findOdd([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5])).toEqual(-1);
+    expect(findOdd([20, 1, 1, 2, 2, 3, 3, 5, 5, 4, 20, 4, 5])).toEqual(5);
+    expect(findOdd([10])).toEqual(10);
+    expect(findOdd([1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1])).toEqual(10);
+    expect(findOdd([5, 4, 3, 2, 1, 5, 4, 3, 2, 10, 10])).toEqual(1);
   });
 });
-
-// Test.assertSimilar(inter(A, B), A, "A inter A == A");
-//
-// Test.assertSimilar(AB, C);
-// Test.assertSimilar([...AB].sort(), [...inter(A, B)].sort(), "A inter B == B inter A");
-//
-// Test.assertEquals(AB instanceof Set, true, "A inter B should be a Set too")

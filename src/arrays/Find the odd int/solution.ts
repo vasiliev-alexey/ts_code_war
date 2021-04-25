@@ -1,16 +1,19 @@
-export function inter(A: Set<number>, B: Set<number>): Set<number> {
-  const rez = new Set<number>();
-  for (let value of A.values()) {
-    if (B.has(value)) {
-      rez.add(value);
-    }
-  }
+export function findOdd(params: number[]): number {
+  let acum = new Map<number, number>(
+    params.map((p) => [p, 0] as [number, number])
+  );
 
-  for (let value of B.values()) {
-    if (A.has(value)) {
-      rez.add(value);
+  params.forEach((el) => {
+    acum.set(el, 1 + acum.get(el)!);
+    return acum;
+  }, {});
+
+  let rez = 0;
+  acum.forEach((val, key) => {
+    if (val % 2 === 1) {
+      rez = key;
     }
-  }
+  });
 
   return rez;
 }
