@@ -6,7 +6,9 @@ export function fridayTheThirteenths(start: number, end?: number) {
   while (iterDate <= dtEnd) {
     if (iterDate.getDay() === 5) {
       dateFinded.push(
-        `${iterDate.getMonth() + 1}/${iterDate.getDate()}/${iterDate.getUTCFullYear()}`
+        `${
+          iterDate.getMonth() + 1
+        }/${iterDate.getDate()}/${iterDate.getUTCFullYear()}`
       );
     }
     iterDate.setMonth(iterDate.getMonth() + 1); // Switch to next day

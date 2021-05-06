@@ -21,7 +21,7 @@
 
 ---
 
-- [ ] Array
+- [x] Array
 - [x] 7 kyu https://www.codewars.com/kata/playing-with-sets-intersection
 - [x] 7 kyu https://www.codewars.com/kata/divide-and-conquer
 - [x] 6 kyu https://www.codewars.com/kata/find-the-odd-int/
@@ -30,9 +30,9 @@
 
 ---
 
-- [ ] Date
-- [ ] 7 kyu https://www.codewars.com/kata/it-is-written-in-the-stars
-- [ ] 6 kyu https://www.codewars.com/kata/friday-the-13ths
+- [x] Date
+- [x] 7 kyu https://www.codewars.com/kata/it-is-written-in-the-stars
+- [x] 6 kyu https://www.codewars.com/kata/friday-the-13ths
 
 ---
 
