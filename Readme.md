@@ -36,9 +36,9 @@
 
 ---
 
-- [ ] Object
-- [ ] 7 kyu https://www.codewars.com/kata/counting-array-elements
-- [ ] 7 kyu https://www.codewars.com/kata/who-is-the-killer-1
+- [x] Object
+- [x] 7 kyu https://www.codewars.com/kata/counting-array-elements
+- [x] 7 kyu https://www.codewars.com/kata/who-is-the-killer-1
 
 ---
 
