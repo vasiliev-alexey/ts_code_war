@@ -1,12 +1,14 @@
-// @ts-ignore
-export function squares(x, n) {
-  let arr = [];
-  let prev = x;
-
-  for (let index = 0; index < n; index++) {
-    arr.push(prev);
-    prev = prev * prev;
+export function sumTriangularNumbers(n: number): number {
+  if (n <=0) {
+    return 0;
   }
 
-  return arr;
+  let next = 0;
+  let rez = 0;
+  for (let i = 0; i <=  n; i++) {
+    next = next  +i;
+    rez = rez + next;
+  }
+
+  return rez ;
 }
