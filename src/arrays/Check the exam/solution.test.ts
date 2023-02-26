@@ -1,12 +1,7 @@
-// See https://www.chaijs.com for how to use Chai.
-import { assert } from "chai";
-import { checkExam } from "./solution";
+import {assert} from "chai";
+import {sumOfMinimums} from "../sumOfMinimums/solution";
 
 describe("Basic tests", () => {
-  it("Should pass basic tests", () => {
-    assert.equal(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]), 6);
-    assert.equal(checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]), 7);
-    assert.equal(checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]), 16);
-    assert.equal(checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]), 0);
-  });
+  it("Testing for [[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]", () => assert.strictEqual(sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]), 9));
+  it("Testing for [[11, 12, 14, 54], [67, 89, 90, 56], [7, 9, 4, 3], [9, 8, 6, 7]]", () => assert.strictEqual(sumOfMinimums([[11, 12, 14, 54], [67, 89, 90, 56], [7, 9, 4, 3], [9, 8, 6, 7]]), 76));
 });

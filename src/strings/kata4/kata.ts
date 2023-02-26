@@ -7,3 +7,4 @@ export function rowSumOddNumbers(n: number): number {
   }
   return rez;
 }
+
