@@ -34,6 +34,3 @@ function findLCD(fractions: [number, number][]): number | undefined {
 function GCD(k: number, n: number): number {
   return k ? GCD(n % k, k) : n;
 }
-
-
-
