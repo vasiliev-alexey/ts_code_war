@@ -18,7 +18,6 @@ const maxSequence = (arr: number[]): number => {
                 sum = temp.reduce((a, v) => a + v);
             }
             result.push([...temp]);
-
         }
     }
 
