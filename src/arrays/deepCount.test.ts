@@ -33,3 +33,23 @@ export class Challenge {
         return arr.reduce((acc, c) => acc + c, 0)
     }
 }
+
+
+var FilterNumbers = function(str) {
+    return str.split('').filter(c =>  {
+
+        return Object.is(parseInt(c), NaN)
+    }).join('');
+}
+
+
+describe('Fixed Tests', () => {
+
+    it('should ', function () {
+        expect(FilterNumbers("bfceeceacfad0ddabdcd")).toEqual( 'bfceeceacfadddabdcd');
+    });
+
+
+
+});
+
