@@ -1,13 +1,13 @@
-const isValidCoordinates = (coordinates) => {
-    const isValid = (coordinate, type) => {
+const isValidCoordinates = (coordinates : string) => {
+    const isValid = (coordinate : string, type : "lat" | "long" ) => {
         if (type === "lat") {
-            return Math.abs(coordinate) >= 0 && Math.abs(coordinate) <= 90;
+            return Math.abs(+coordinate) >= 0 && Math.abs(+coordinate) <= 90;
         } else {
-            return Math.abs(coordinate) >= 0 && Math.abs(coordinate) <= 180;
+            return Math.abs(+coordinate) >= 0 && Math.abs(+coordinate) <= 180;
         }
     };
 
-    const isDigitOrSpecChar = (str) => {
+    const isDigitOrSpecChar = (str: string) => {
         const allowed = [
             "-", ",", ".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
         ];
@@ -22,15 +22,13 @@ const isValidCoordinates = (coordinates) => {
 
     const lat = coordinates.split(",")[0];
     const long = coordinates.split(",")[1].slice(1);
-    return coordinates.split(",").length > 2 ||
-    !isValid(lat, "lat") ||
-    !isValid(long, "long") ||
-    !isDigitOrSpecChar(lat) ||
-    !isDigitOrSpecChar(long)
-        ? false
-        : true;
+    return !(coordinates.split(",").length > 2 ||
+        !isValid(lat, "lat") ||
+        !isValid(long, "long") ||
+        !isDigitOrSpecChar(lat) ||
+        !isDigitOrSpecChar(long));
 };
-
+// https://www.codewars.com/kata/5269452810342858ec000951/train/typescript
 
 
 
