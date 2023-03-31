@@ -164,11 +164,11 @@ describe("ExampleTestCases", function () {
 });
 
 
-
-  function findMultiples(integer: number, limit: number): number[] {
-    return    Array.from(Array(Math.floor(limit/integer)).keys()).map( e => (e+1) * integer)
+function findMultiples(integer: number, limit: number): number[] {
+    return Array.from(Array(Math.floor(limit / integer)).keys()).map(e => (e + 1) * integer)
 }
-import { assert } from "chai";
+
+import {assert} from "chai";
 
 
 import chai from "chai";
@@ -184,71 +184,70 @@ describe("Basic tests", () => {
 });
 
 
-export function getAverage(marks:number[]):number{
+export function getAverage(marks: number[]): number {
 
-    return Math.floor( marks.reduce( (a, b ) => a+b)  / marks.length);
+    return Math.floor(marks.reduce((a, b) => a + b) / marks.length);
 }
 
 
-describe("solution", function(){
-    it("Basic Tests", function(){
-        assert.equal(getAverage([2,2,2,2]),2);
-        assert.equal(getAverage([1,2,3,4,5,]),3);
-        assert.equal(getAverage([1,1,1,1,1,1,1,2]),1);
+describe("solution", function () {
+    it("Basic Tests", function () {
+        assert.equal(getAverage([2, 2, 2, 2]), 2);
+        assert.equal(getAverage([1, 2, 3, 4, 5,]), 3);
+        assert.equal(getAverage([1, 1, 1, 1, 1, 1, 1, 2]), 1);
     });
 });
 
 //  round(pi*h/12 * (d1**2 + d1*d2 + d2**2), 2)
-function cupVolume(d1, d2, height){
-    return  Math.round(Math.PI  *height /12 * (d1**2 + d1*d2 + d2**2) *100)/100
+function cupVolume(d1, d2, height) {
+    return Math.round(Math.PI * height / 12 * (d1 ** 2 + d1 * d2 + d2 ** 2) * 100) / 100
 }
 
-describe("Cup Volume", function() {
-    it("Example tests", function() {
-       expect(cupVolume(1, 1, 1)).toEqual( 0.79);
-       expect(cupVolume(10, 8, 10)).toEqual( 638.79);
-       expect(cupVolume(1000, 1000, 1000)).toEqual( 785398163.4);
-       expect(cupVolume(13.123, 123.12, 1)).toEqual( 4436.57);
-       expect(cupVolume(5, 12, 31)).toEqual( 1858.51);
-    })})
+describe("Cup Volume", function () {
+    it("Example tests", function () {
+        expect(cupVolume(1, 1, 1)).toEqual(0.79);
+        expect(cupVolume(10, 8, 10)).toEqual(638.79);
+        expect(cupVolume(1000, 1000, 1000)).toEqual(785398163.4);
+        expect(cupVolume(13.123, 123.12, 1)).toEqual(4436.57);
+        expect(cupVolume(5, 12, 31)).toEqual(1858.51);
+    })
+})
 
 
-function stringClean(s){
-  return   s.replaceAll(/\d/ig, '')
+function stringClean(s) {
+    return s.replaceAll(/\d/ig, '')
 }
-
-
 
 
 describe("Basic tests", () => {
     it("Testing for fixed tests", () => {
-        expect(stringClean("")).toEqual( "")
-        expect(stringClean("! !")).toEqual( "! !")
-        expect(stringClean("123456789")).toEqual( "")
-        expect(stringClean("(E3at m2e2!!)")).toEqual( "(Eat me!!)")
-        expect(stringClean("Dsa32 cdsc34232 csa!!! 1I 4Am cool!")).toEqual( "Dsa cdsc csa!!! I Am cool!")
-        expect(stringClean("A1 A1! AAA   3J4K5L@!!!")).toEqual( "A A! AAA   JKL@!!!")
-        expect(stringClean("Adgre2321 A1sad! A2A3A4 fv3fdv3J544K5L@")).toEqual( "Adgre Asad! AAA fvfdvJKL@")
-        expect(stringClean("Ad2dsad3ds21 A  1$$s122ad! A2A3Ae24 f44K5L@222222 ")).toEqual( "Addsadds A  $$sad! AAAe fKL@ ")
-        expect(stringClean("33333Ad2dsad3ds21 A3333  1$$s122a!d! A2!A!3Ae$24 f2##222 ")).toEqual( "Addsadds A  $$sa!d! A!A!Ae$ f## ")
-        expect(stringClean("My \"me3ssy\" d8ata issues2! Will1 th4ey ever, e3ver be3 so0lved?")).toEqual( "My \"messy\" data issues! Will they ever, ever be solved?")
-        expect(stringClean("Wh7y can't we3 bu1y the goo0d software3? #cheapskates3")).toEqual( "Why can't we buy the good software? #cheapskates")
+        expect(stringClean("")).toEqual("")
+        expect(stringClean("! !")).toEqual("! !")
+        expect(stringClean("123456789")).toEqual("")
+        expect(stringClean("(E3at m2e2!!)")).toEqual("(Eat me!!)")
+        expect(stringClean("Dsa32 cdsc34232 csa!!! 1I 4Am cool!")).toEqual("Dsa cdsc csa!!! I Am cool!")
+        expect(stringClean("A1 A1! AAA   3J4K5L@!!!")).toEqual("A A! AAA   JKL@!!!")
+        expect(stringClean("Adgre2321 A1sad! A2A3A4 fv3fdv3J544K5L@")).toEqual("Adgre Asad! AAA fvfdvJKL@")
+        expect(stringClean("Ad2dsad3ds21 A  1$$s122ad! A2A3Ae24 f44K5L@222222 ")).toEqual("Addsadds A  $$sad! AAAe fKL@ ")
+        expect(stringClean("33333Ad2dsad3ds21 A3333  1$$s122a!d! A2!A!3Ae$24 f2##222 ")).toEqual("Addsadds A  $$sa!d! A!A!Ae$ f## ")
+        expect(stringClean("My \"me3ssy\" d8ata issues2! Will1 th4ey ever, e3ver be3 so0lved?")).toEqual("My \"messy\" data issues! Will they ever, ever be solved?")
+        expect(stringClean("Wh7y can't we3 bu1y the goo0d software3? #cheapskates3")).toEqual("Why can't we buy the good software? #cheapskates")
     });
 });
 
 function tailSwap(arr) {
-    return [arr[0].split(":")[0]+ ":"+ arr[1].split(":")[1] , arr[1].split(":")[0]+ ":"+ arr[0].split(":")[1]] ;
+    return [arr[0].split(":")[0] + ":" + arr[1].split(":")[1], arr[1].split(":")[0] + ":" + arr[0].split(":")[1]];
 }
-describe("Testing", function(){
-    it('Basic Tests', function(){
-        expect(tailSwap(['abc:123', 'cde:456'])).toEqual( ['abc:456', 'cde:123']);
-        expect(tailSwap(['a:12345', '777:xyz'])).toEqual( ['a:xyz', '777:12345']);
+
+describe("Testing", function () {
+    it('Basic Tests', function () {
+        expect(tailSwap(['abc:123', 'cde:456'])).toEqual(['abc:456', 'cde:123']);
+        expect(tailSwap(['a:12345', '777:xyz'])).toEqual(['a:xyz', '777:12345']);
     });
 });
 
 
-
-function getSolution(arr, sum) : boolean {
+function getSolution(arr, sum): boolean {
 
     let res = [],
         i = 0,
@@ -256,13 +255,13 @@ function getSolution(arr, sum) : boolean {
         solution;
     res.push(arr[0]);
 
-    while ( i<arr.length) {
+    while (i < arr.length) {
         copyArr = [...res];
         res.length = 0;//delete array
 
-        for (let j=0; j<copyArr.length; j++) {
-            res.push(copyArr[j] + arr[i+1]);
-            res.push(copyArr[j] - arr[i+1]);
+        for (let j = 0; j < copyArr.length; j++) {
+            res.push(copyArr[j] + arr[i + 1]);
+            res.push(copyArr[j] - arr[i + 1]);
         }
 
         i++;
@@ -272,14 +271,55 @@ function getSolution(arr, sum) : boolean {
     return solution;
 
 
-
 }
 
-describe('Basic tests11', function(){
+describe('Basic tests11', function () {
     it('should ', function () {
-        expect(getSolution([1, 3, 4, 6, 8], -2)).toEqual( true);
-     //   expect(getSolution([15, 2, 3], 10)).toEqual( true);
-        expect(getSolution([1, 5, 3, 2, 5], -2)).toEqual( false);
+        expect(getSolution([1, 3, 4, 6, 8], -2)).toEqual(true);
+        //   expect(getSolution([15, 2, 3], 10)).toEqual( true);
+        expect(getSolution([1, 5, 3, 2, 5], -2)).toEqual(false);
     });
 
 });
+
+
+function closeCompare(a, b, margin = 0) {
+    if (Math.abs(a - b) <= margin) {
+        return 0;
+    }
+    if ((a - b) < margin) {
+        return -1;
+    }
+    return 1
+}
+
+describe("Tests", () => {
+    it("Sample tests", () => {
+        assert.strictEqual(closeCompare(4, 5), -1)
+        assert.strictEqual(closeCompare(5, 5), 0)
+        assert.strictEqual(closeCompare(6, 5), 1)
+        assert.strictEqual(closeCompare(-6, -5), -1)
+
+        assert.strictEqual(closeCompare(2, 5, 3), 0)
+        assert.strictEqual(closeCompare(8.1, 5, 3), 1)
+        assert.strictEqual(closeCompare(1.99, 5, 3), -1)
+    });
+});
+
+
+function matchArrays <T>(v: T[], r:T[]) : number{
+   return   v.filter( e => r.includes(e)).length
+
+}
+
+describe("Tests", () => {
+    it("test", () => {
+        expect(matchArrays(['Perl', 'Closure', 'JavaScript'], ['Go', 'C++', 'Erlang'])).toEqual(0);
+        expect(matchArrays(['incapsulation', 'OOP', 'array'], ['time', 'propert', 'paralelism', 'OOP'])).toEqual(1);
+        expect(matchArrays([1, 2, 3, 4, 5], [2, 3, 4, 5, 6])).toEqual(4);
+    });
+});
+
+function isAN(value) {
+    return  typeof  value == "number" ;
+}
