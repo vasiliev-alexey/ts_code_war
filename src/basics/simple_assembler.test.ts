@@ -157,3 +157,24 @@ describe("Tesqqts", () => {
     });
 });
 
+
+
+function alphabetized(s : string) {
+    const code =
+        "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789!?’'()*+,.…:\"@#$%&^-;<=>[]_{}~“”£ ";
+    return  [...s].filter( c => c.match(/[a-zA-Z]+/g) ).sort((a, b) =>  a.toLowerCase().charCodeAt(0) == b.toLowerCase().charCodeAt(0)?
+        0:
+
+        a.toLowerCase().charCodeAt(0) - b.toLowerCase().charCodeAt(0) )
+        .join("")
+        .trim();
+}
+
+describe('wellSorted(s)', function() {
+    it('should handle "the good book"', function() {
+       expect(alphabetized('Th#e Holy Bible')).toEqual('BbeehHilloTy')
+    })
+})
+
+
+
