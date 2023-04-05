@@ -32,3 +32,15 @@ describe("Persistent Bugger.", () => {
         assert.strictEqual(persistence(999), 4);
     });
 });
+
+
+function sumEvenNumbers(input : number[]) {
+    return input.filter( v => v%2 == 0).reduce( (a ,b) => a+b)
+}
+
+
+describe("Tests", () => {
+    it("test", () => {
+        assert.strictEqual(sumEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), 30);
+    });
+});
