@@ -1,0 +1,46 @@
+Array.prototype.transpose = function() {
+
+    if( !this[0]) {
+        return  this;
+    }
+    let rowCnt = this[0].length;
+    if(rowCnt==0) {
+        return  [[]];
+    }
+
+
+
+    let colCnt = this.length;
+
+    if(colCnt==0) {
+        return  [[]];
+    }
+
+    let res = [];
+    for (let i = 0; i < rowCnt; i++) {
+        let row = [];
+        for (let j = 0; j < colCnt; j++) {
+            row.push(this[j][i]);
+        }
+        res.push(row);
+    }
+    return res
+};
+
+
+// Since Node 10, we're using Mocha.
+// You can use `chai` for assertions.
+const chai = require("chai");
+const assert = chai.assert;
+// Uncomment the following line to disable truncating failure messages for deep equals, do:
+// chai.config.truncateThreshold = 0;
+// Since Node 12, we no longer include assertions from our deprecated custom test framework by default.
+// Uncomment the following to use the old assertions:
+// const Test = require("@codewars/test-compat");
+
+describe("Solution", function() {
+    it("should test for something", function() {
+        // Test.assertEquals(1 + 1, 2);
+        // assert.strictEqual(1 + 1, 2);
+    });
+});
