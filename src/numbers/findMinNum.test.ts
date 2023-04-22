@@ -1,4 +1,11 @@
+function unusualFive() {
+    return ['', '' , '' , '' , ''].length;
+}
+
 function findMinNum(num) {
+
+
+
     let divs = 1;
     let res = 0;
     while (true) {
